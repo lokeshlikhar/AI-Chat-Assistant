@@ -1,0 +1,58 @@
+:root {
+  color: #ececf1;
+  background: #212121;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; min-width: 320px; }
+
+button, input { font: inherit; }
+button { color: inherit; }
+
+.app {
+  min-height: 100dvh;
+  background: #212121;
+  display: flex;
+}
+
+.sidebarOverlay { display: none; }
+
+.flashMessage {
+  position: fixed;
+  top: 16px;
+  right: 18px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: min(390px, calc(100vw - 32px));
+  padding: 12px 10px 12px 13px;
+  border: 1px solid #7f313a;
+  border-radius: 11px;
+  background: #3b2024;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, .35);
+  color: #ffe4e6;
+  font-size: 13px;
+  line-height: 1.35;
+  animation: flashIn 180ms ease both;
+}
+.flashMessage > i { color: #fb7185; font-size: 16px; }
+.flashMessage span { flex: 1; }
+.flashMessage button { display: grid; place-items: center; width: 26px; height: 26px; padding: 0; border: 0; border-radius: 6px; background: transparent; color: #fecdd3; cursor: pointer; }
+.flashMessage button:hover { background: rgba(255, 255, 255, .1); color: #fff; }
+@keyframes flashIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 700px) {
+  .sidebarOverlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    background: rgba(0, 0, 0, 0.56);
+    backdrop-filter: blur(2px);
+  }
+  .flashMessage { top: 10px; right: 10px; width: calc(100vw - 20px); }
+}

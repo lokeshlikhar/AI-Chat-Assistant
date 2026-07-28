@@ -1,0 +1,46 @@
+.welcome {
+  width: min(100%, 760px);
+  margin: auto;
+  padding: 24px;
+  text-align: center;
+  animation: appear 300ms ease both;
+}
+
+.welcome h1 { margin: 0; color: #f1f1f4; font-size: clamp(28px, 3.2vw, 34px); letter-spacing: -.65px; }
+.welcome p { margin: 12px 0 0; color: #9c9ca6; font-size: 14px; }
+
+.chats {
+  width: 100%;
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 20px 28px;
+  scrollbar-width: thin;
+  scrollbar-color: #4d4d4d transparent;
+}
+.chatContent { width: min(100%, 720px); margin: 0 auto; }
+.userDiv { display: flex; justify-content: flex-end; margin: 14px 0; font-size: 16px; }
+.gptDiv { margin: 14px 0 22px; color: #ececf1; font-size: 16px; line-height: 1.65; text-align: left; }
+.userMessage { max-width: min(78%, 560px); margin: 0; padding: 10px 14px; border-radius: 17px 17px 4px 17px; background: #303030; color: #f4f4f5; line-height: 1.5; white-space: pre-wrap; }
+.gptDiv p:first-child { margin-top: 0; }
+.gptDiv p:last-child { margin-bottom: 0; }
+.gptDiv ul, .gptDiv ol { padding-left: 23px; }
+.gptDiv code { padding: 2px 5px; border-radius: 4px; background: #303030; color: #e7e7ed; font-size: .88em; }
+.gptDiv pre { overflow-x: auto; padding: 14px; border: 1px solid #3a3a3a; border-radius: 11px; background: #171717; white-space: pre; }
+.gptDiv pre code { padding: 0; background: transparent; }
+.hljs { border-radius: 9px !important; }
+
+@keyframes appear { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 700px) {
+  .chats { padding: 14px 12px 22px; }
+  .welcome { padding: 24px 20px; }
+  .welcome p { font-size: 13px; }
+  .userMessage { max-width: 86%; }
+}
+
+@media (max-width: 420px) {
+  .chats { padding: 10px 8px 16px; }
+  .gptDiv, .userDiv { font-size: 13.5px; }
+  
+  .welcome h1 { font-size: 25px; }
+}
