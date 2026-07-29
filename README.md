@@ -1,10 +1,10 @@
-# 🤖 AI Chat Assistant – ChatGPT Inspired AI Conversation Platform
+# 🤖 AI Chat Assistant – Generative AI Chat Application
 
 A full-stack AI-powered chat application inspired by ChatGPT, built using **React.js, Node.js, Express.js, MongoDB, and the Groq API**. Users can chat with an AI assistant in real time, view conversation history, and enjoy a clean, responsive interface with Markdown-formatted responses.
 
 ## 🔗 Live Preview
 
-🌐 **Live Website:** https://
+🌐 **Live Website:** https://ai-chat-assistant-ckt5.onrender.com/
 
 ---
 
@@ -13,8 +13,6 @@ A full-stack AI-powered chat application inspired by ChatGPT, built using **Reac
 💬 Real-time AI conversations powered by Groq API
 
 🧠 AI-generated responses with Markdown support
-
-📝 Create and manage chat conversations
 
 📚 View previous chat history
 
@@ -58,19 +56,9 @@ A full-stack AI-powered chat application inspired by ChatGPT, built using **Reac
 
 🤖 Integrating Large Language Models through the Groq API
 
-🗄️ Designing MongoDB schemas for storing chat history
-
-📡 Managing asynchronous API requests and application state
-
 📝 Rendering AI responses with Markdown formatting
 
 ☁️ Deploying frontend and backend on Render
-
----
-
-## 📸 Screenshots
-
-*Add screenshots of your application here.*
 
 ---
 
