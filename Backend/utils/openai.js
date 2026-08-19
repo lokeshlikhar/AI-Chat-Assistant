@@ -15,7 +15,7 @@ const getOpenAiResponse = async (message) => {
       Authorization: `Bearer ${process.env.GROQ_API_KEY}`,
     },
     body: JSON.stringify({
-      model: "llama-3.3-70b-versatile",
+      model: "meta-llama/llama-prompt-guard-2-86m",
       messages: [
         {
           role: "user",
